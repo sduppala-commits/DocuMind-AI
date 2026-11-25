@@ -15,6 +15,20 @@ The application combines semantic search, vector embeddings, and Google Gemini t
 - **Document Management** — Delete documents from your library.
 - **User-Specific Libraries** — Keep document access separated by user account.
 
+## Application Screenshots
+
+### Login
+![Login](screenshots/Login.png)
+
+### My Documents
+![My Documents](screenshots/My-Documents.png)
+
+### Ask AI
+![Ask AI](screenshots/Ask-Ai.png)
+
+### Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
 ## Technology Stack
 
 | Layer | Technologies |
@@ -62,6 +76,12 @@ DocuMind-AI/
 │   │   └── main.jsx
 │   └── package.json
 │
+├── screenshots/
+│   ├── Login.png
+│   ├── My-Documents.png
+│   ├── Ask-Ai.png
+│   └── Dashboard.png
+│
 ├── .env.example
 ├── .gitignore
 └── README.md
@@ -100,4 +120,44 @@ On Windows PowerShell:
 Install dependencies:
 
 ```bash
-pip install -r backend
+pip install -r backend/requirements.txt
+```
+
+Create a `.env` file in the project root using `.env.example` as a reference. Add your own Gemini API key and JWT secret. Never upload your `.env` file to GitHub.
+
+Run the backend:
+
+```bash
+python -m uvicorn backend.app:app --reload
+```
+
+### 3. Set Up the Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open the local frontend URL displayed in the terminal.
+
+## Team
+
+- **Sravya** — Frontend development, UI/UX, API integration, and testing.
+- **Tulasi** — Backend development, RAG pipeline, and AI integration.
+
+## Project Status
+
+**Locally runnable project.**
+
+The core application features have been developed and tested locally. Public deployment of the original React and FastAPI application is not yet available.
+
+## Future Improvements
+
+- Public deployment
+- Persistent cloud storage
+- Expanded document format support
+- Improved document retrieval and response evaluation
+- Additional testing and performance improvements
